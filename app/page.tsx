@@ -55,7 +55,7 @@ export default function Home() {
     }
 
     return (
-        <main className="flex min-h-screen flex-col p-24 items-center justify-center">
+        <main className="flex min-h-screen flex-col p-24 items-center justify-center bg-white text-black">
             Fill some Data...
             {/* <form onSubmit={onSubmit} className="flex flex-col w-96 gap-4">
                 ชื่อผู้รับ
@@ -80,6 +80,7 @@ export default function Home() {
                     name="name"
                     placeholder="Name"
                     onChange={onNameChange}
+                    className="border border-black rounded-md p-2"
                 />
                 ที่อยู่
                 <input
@@ -87,6 +88,7 @@ export default function Home() {
                     name="address"
                     placeholder="Address"
                     onChange={onAddressChange}
+                    className="border border-black rounded-md p-2"
                 />
                 จังหวัด
                 <input
@@ -94,9 +96,14 @@ export default function Home() {
                     name="province"
                     placeholder="Province"
                     onChange={onProvinceChange}
+                    className="border border-black rounded-md p-2"
                 />
                 สถานะ
-                <select name="status" onChange={onStatusChange}>
+                <select
+                    name="status"
+                    onChange={onStatusChange}
+                    className="border border-black rounded-md p-2"
+                >
                     <option value="inProcess">รับเข้าระบบ</option>
                     <option value="inTransit">ระหว่างขนส่ง</option>
                     <option value="inDelivery">ออกไปนำจ่าย</option>
